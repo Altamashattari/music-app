@@ -33,3 +33,8 @@ export const validateRoute = (handler: any) => {
     });
   };
 };
+
+export const validateToken = (token) => {
+  const user = jwt.verify(token, "hello");
+  return user;
+};
